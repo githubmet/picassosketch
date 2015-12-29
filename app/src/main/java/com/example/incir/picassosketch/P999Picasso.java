@@ -10,18 +10,18 @@ import android.widget.Toast;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 //Picasso.Builder dan hareketle
-public class P001Picasso extends Activity{
+public class P999Picasso extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.p001picasso);
-        ImageView imageViewP001= (ImageView)findViewById(R.id.imageViewP001);
+        setContentView(R.layout.p999picasso);
+        ImageView imageViewP001= (ImageView)findViewById(R.id.imageViewP999);
 
         Picasso.Builder builder=new Picasso.Builder(this);
         builder.listener(new Picasso.Listener() {
             @Override
             public void onImageLoadFailed(Picasso picasso, Uri uri, Exception e) {
-                Toast.makeText(P001Picasso.this, "Failed dedik", Toast.LENGTH_SHORT).show();
+                Toast.makeText(P999Picasso.this, "Failed dedik", Toast.LENGTH_SHORT).show();
             }
         }).build()
                 .load("http://lorempixel.com/400/200/sports/2/Deneme-Text/")
@@ -30,12 +30,12 @@ public class P001Picasso extends Activity{
                         .into(imageViewP001, new Callback() {
                             @Override
                             public void onSuccess() {
-                                Toast.makeText(P001Picasso.this, "onSuccess dedik", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(P999Picasso.this, "onSuccess dedik", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
                             public void onError() {
-                                Toast.makeText(P001Picasso.this, "onError dedik", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(P999Picasso.this, "onError dedik", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
@@ -52,7 +52,7 @@ public class P001Picasso extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.p001picasso);
+        setContentView(R.layout.p999picasso);
         ImageView imageView= (ImageView)findViewById(R.id.imageViewP001);
 
         Picasso.with(this)
