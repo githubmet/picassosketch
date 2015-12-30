@@ -4,7 +4,7 @@
     <string-array name="ActivityNames">
         <item>P001MenuToPicassoListView</item>
         <item>P003PicassoPriorty</item>
-        <item>P002Menu</item>
+        <item>P004ResizeRotate</item>
         <item>P003Menu</item>
         <item>P004Menu</item>
     </string-array>

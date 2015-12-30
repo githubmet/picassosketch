@@ -22,11 +22,11 @@
 
         <activity android:name=".P001MenuToPicassoListView"></activity>
 
-        <activity  android:name=".P001PlayPictureCanvas"></activity>
-
         <activity android:name=".P002CreateBitmap"></activity>
 
         <activity android:name=".P003PicassoPriorty"></activity>
+
+        <activity android:name=".P004ResizeRotate"></activity>
 
     </application>
 

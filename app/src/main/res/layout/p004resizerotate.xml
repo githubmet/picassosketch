@@ -5,8 +5,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageViewP123"
+        android:id="@+id/imageViewP004"
         android:layout_centerInParent="true"/>
-
 
 </RelativeLayout>

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 public class P001MenuArrayAdapter extends ArrayAdapter<String> {
 
