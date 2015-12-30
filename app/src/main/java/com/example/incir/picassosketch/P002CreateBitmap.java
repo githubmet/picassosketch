@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import android.graphics.drawable.Drawable;
-import android.graphics.Bitmap;
 
 import com.squareup.picasso.Picasso;
 

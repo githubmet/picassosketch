@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string-array name="ActivityNames">
+        <item>P001MenuToPicassoListView</item>
+        <item>P003PicassoPriorty</item>
+        <item>P002Menu</item>
+        <item>P003Menu</item>
+        <item>P004Menu</item>
+    </string-array>
+
     <string-array name="calismalar">
         <item>Calisma 1</item>
         <item>Calisma 2</item>
