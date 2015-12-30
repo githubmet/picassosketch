@@ -11,14 +11,19 @@ import android.graphics.Rect;
 import android.graphics.Paint;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.widget.RemoteViews;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
+
+
 public class P001ReturnView extends View {
+    Context context;
     public P001ReturnView(Context context) {
         super(context);
+        this.context=context;
     }
 
     @Override
@@ -53,6 +58,7 @@ public class P001ReturnView extends View {
             @Override
             public void onImageLoadFailed(Picasso picasso, Uri uri, Exception e) {
                 e.printStackTrace();
+                Toast.makeText(context,"failed",Toast.LENGTH_LONG).show();
             }
         }).build()
                 .load("http://lorempixel.com/400/200/sports/1/Deneme/")
@@ -60,27 +66,31 @@ public class P001ReturnView extends View {
                 .into(new Target() {
                     @Override
                     public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom loadedFrom) {
-                        //canvas.drawBitmap(bitmap,0,0,null);
-                        Rect rectTopLeft=new Rect(0,0,canvas.getWidth()/2,canvas.getHeight()/2);
-                        Paint paint =new Paint();
-                        paint.setColor(Color.GREEN);
-                        canvas.drawRect(rectTopLeft, paint);
+
+                        BitmapDrawable bitmapDrawable=new BitmapDrawable(context.getResources(),bitmap);
+                        Bitmap RealBitmap=bitmapDrawable.getBitmap();
+                        canvas.drawBitmap(RealBitmap,0,0,null);
+
+                        Toast.makeText(context, "onBitmapLoaded", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onBitmapFailed(Drawable drawable) {
-                        Rect rectTopLeft=new Rect(0,0,canvas.getWidth()/2,canvas.getHeight()/2);
-                        Paint paint =new Paint();
+                        Rect rectTopLeft = new Rect(0, 0, canvas.getWidth() / 2, canvas.getHeight() / 2);
+                        Paint paint = new Paint();
                         paint.setColor(Color.RED);
                         canvas.drawRect(rectTopLeft, paint);
+                        Toast.makeText(context, "onBitmapFailed", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onPrepareLoad(Drawable drawable) {
-                        Rect rectTopLeft=new Rect(0,0,canvas.getWidth()/2,canvas.getHeight()/2);
-                        Paint paint =new Paint();
+                        Rect rectTopLeft = new Rect(0, 0, canvas.getWidth() / 2, canvas.getHeight() / 2);
+                        Paint paint = new Paint();
                         paint.setColor(Color.GRAY);
                         canvas.drawRect(rectTopLeft, paint);
+
+                        Toast.makeText(context, "onPrepareLoad", Toast.LENGTH_LONG).show();
                     }
                 });
 

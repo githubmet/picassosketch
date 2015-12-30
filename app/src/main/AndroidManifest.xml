@@ -21,6 +21,10 @@
         </activity>
 
         <activity  android:name=".P001PlayPictureCanvas"></activity>
+
+        <activity android:name=".P002CreateBitmap"></activity>
+
+        <activity android:name=".P003PicassoTransform"></activity>
     </application>
 
 </manifest>

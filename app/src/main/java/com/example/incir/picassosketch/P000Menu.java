@@ -29,7 +29,8 @@ public class P000Menu extends Activity implements AdapterView.OnItemClickListene
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         //Toast.makeText(P000Menu.this, String.valueOf(position), Toast.LENGTH_SHORT).show();
-        Intent intent =new Intent(this,P001PlayPictureCanvas.class);
+        Intent intent =new Intent(this,P002CreateBitmap.class);
+        intent.putExtra("position",String.valueOf(position));
         startActivity(intent);
     }
 }

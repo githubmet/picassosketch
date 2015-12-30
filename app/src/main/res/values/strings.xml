@@ -2,4 +2,6 @@
     <string name="app_name">PicassoSketch</string>
     <string name="action_settings">Settings</string>
     <string name="deneme">deneme</string>
+    <string name="bitmap_255">Let\'s make this picture cold (255-)</string>
+    <string name="picasso_transform">Use Picasso Transform</string>
 </resources>
