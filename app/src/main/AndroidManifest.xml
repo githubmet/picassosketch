@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.incir.picassosketch">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".P000MenuToActivity"
+            android:name=".P000Menu"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".P001MenuToPicassoListView"></activity>
+        <activity android:name=".P001PicassoListView"></activity>
 
         <activity android:name=".P002CreateBitmap"></activity>
 
@@ -29,5 +28,7 @@
         <activity android:name=".P004ResizeRotate"></activity>
 
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission> //internet baglantisi olmadan veri cekemezsin. uses-permission sona yazilir.
 
 </manifest>

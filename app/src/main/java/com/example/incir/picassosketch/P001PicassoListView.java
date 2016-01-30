@@ -10,16 +10,16 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class P001MenuToPicassoListView extends Activity implements AdapterView.OnItemClickListener {
+public class P001PicassoListView extends Activity implements AdapterView.OnItemClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.p001menutopicassolistview);
+        setContentView(R.layout.p001picassolistview);
 
         ListView listViewP009=(ListView)findViewById(R.id.listViewP001Menu);
         String calismalar[]=getResources().getStringArray(R.array.calismalar);
 
-        ListAdapter listAdapter=new P001MenuArrayAdapter(this,calismalar);
+        ListAdapter listAdapter=new P001ArrayAdapter(this,calismalar);
         listViewP009.setAdapter(listAdapter);
 
         listViewP009.setOnItemClickListener(this);

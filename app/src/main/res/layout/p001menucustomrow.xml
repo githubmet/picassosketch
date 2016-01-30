@@ -11,8 +11,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:id="@+id/textViewDynamicP001Menu"
+        android:minLines="3"
+        android:background="@color/colorYellow"
         android:text="@string/deneme"/>
 
 

@@ -9,7 +9,7 @@ import android.graphics.Shader;
 
 import com.squareup.picasso.Transformation;
 
-public class P002Transform implements Transformation {
+public class P002Transform implements Transformation {  //dikkat extends degil bir arayuzden faydaliniyoruz
     public Bitmap transform(Bitmap source){
         int size =Math.min(source.getWidth(),source.getHeight());
         int x=(source.getWidth()-size)/2;

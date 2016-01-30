@@ -32,7 +32,14 @@ public class P002CreateBitmap extends Activity implements View.OnClickListener{
 
         Intent intent =getIntent();
         Bundle bundle=intent.getExtras();
-        positionVeri= bundle.getString("position");
+        if(bundle!=null){
+            positionVeri= bundle.getString("position");
+        }
+        else{
+            positionVeri="2";
+        }
+
+
 
         getImageFromUrl();
     }
