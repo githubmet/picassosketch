@@ -38,9 +38,6 @@ public class P002CreateBitmap extends Activity implements View.OnClickListener{
         else{
             positionVeri="2";
         }
-
-
-
         getImageFromUrl();
     }
 

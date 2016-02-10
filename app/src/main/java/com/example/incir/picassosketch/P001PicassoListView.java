@@ -1,14 +1,18 @@
 package com.example.incir.picassosketch;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.ArrayAdapter;
+
+import com.example.incir.picassosketch.adapter.P001ArrayAdapter;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class P001PicassoListView extends Activity implements AdapterView.OnItemClickListener {
     @Override
@@ -16,14 +20,15 @@ public class P001PicassoListView extends Activity implements AdapterView.OnItemC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.p001picassolistview);
 
-        ListView listViewP009=(ListView)findViewById(R.id.listViewP001Menu);
-        String calismalar[]=getResources().getStringArray(R.array.calismalar);
+        ListView listViewP001=(ListView)findViewById(R.id.listViewP001);
 
-        ListAdapter listAdapter=new P001ArrayAdapter(this,calismalar);
-        listViewP009.setAdapter(listAdapter);
+        String[] calismalar=getResources().getStringArray(R.array.calismalar);//dikkat bunu gondererek daha basit yapabilirsin
+        List<String> stringList=new ArrayList(Arrays.asList(calismalar));
 
-        listViewP009.setOnItemClickListener(this);
+        ArrayAdapter arrayAdapter=new P001ArrayAdapter(this,R.layout.p001customrow,stringList);
+        listViewP001.setAdapter(arrayAdapter);
 
+        listViewP001.setOnItemClickListener(this);
     }
 
     @Override
